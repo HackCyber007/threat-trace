@@ -1,0 +1,35 @@
+{
+  "nodes": {
+    "threat_actors": [
+      { "id": "ta1", "name": "TA-505", "origin": "Eastern Europe", "aliases": ["Hive0065"] },
+      { "id": "ta2", "name": "Lazarus Group", "origin": "North Korea", "aliases": ["Hidden Cobra"] }
+    ],
+    "campaigns": [
+      { "id": "c1", "name": "Cobalt Drop", "first_seen": "2024-01-15", "confidence_score": 85 },
+      { "id": "c2", "name": "Silent Night", "first_seen": "2024-03-20", "confidence_score": 90 }
+    ],
+    "malware": [
+      { "id": "m1", "hash": "e3b0c44298fc1c14", "family": "Emotet-V2", "file_type": "Win32 EXE" },
+      { "id": "m2", "hash": "8d969eef6ecad3c2", "family": "Trickbot-Variant", "file_type": "DLL" },
+      { "id": "m3", "hash": "a1b2c3d4e5f60718", "family": "CobaltStrike Beacon", "file_type": "Shellcode" }
+    ],
+    "ips": [
+      { "id": "ip1", "address": "103.45.67.89", "asn": "AS12345", "country": "NL" },
+      { "id": "ip2", "address": "185.220.101.5", "asn": "AS60729", "country": "DE" }
+    ],
+    "domains": [
+      { "id": "d1", "domain": "update-service-sys.com", "registrar": "Namecheap", "first_seen": "2024-01-10" },
+      { "id": "d2", "domain": "cdn-cloud-storage.net", "registrar": "Porkbun", "first_seen": "2024-02-14" }
+    ]
+  },
+  "edges": [
+    { "source": "c1", "target": "ta1", "type": "ATTRIBUTED_TO" },
+    { "source": "m1", "target": "c1", "type": "PART_OF_CAMPAIGN" },
+    { "source": "m2", "target": "c2", "type": "PART_OF_CAMPAIGN" },
+    { "source": "m3", "target": "m1", "type": "DROPPED_BY" },
+    { "source": "m1", "target": "ip1", "type": "COMMUNICATES_WITH" },
+    { "source": "m2", "target": "ip1", "type": "COMMUNICATES_WITH" },
+    { "source": "ip1", "target": "d1", "type": "REUSES_INFRASTRUCTURE" },
+    { "source": "d1", "target": "ip2", "type": "REUSES_INFRASTRUCTURE" }
+  ]
+}
