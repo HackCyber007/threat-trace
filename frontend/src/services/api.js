@@ -2,26 +2,29 @@
 
 const API_BASE = 'https://threat-trace-yaik.onrender.com/api';
 
-async function fetchWrapper(endpoint) {
-  try {
-    const response = await fetch(`${API_BASE}${endpoint}`);
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(data.message || data.error || 'API request failed');
-    }
-    return data;
-  } catch (error) {
-    console.error('API Error:', error);
-    throw error;
+export const getIndicatorSummary = async (indicator) => {
+  const response = await fetch(`${API_BASE}/indicators/summary?value=${encodeURIComponent(indicator)}`);
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message || 'Failed to fetch summary');
   }
-}
+  return response.json();
+};
 
-export const getIndicatorSummary = (indicator) => 
-  fetchWrapper(`/indicators/summary?value=${encodeURIComponent(indicator)}`);
+export const getIndicatorGraph = async (indicator) => {
+  const response = await fetch(`${API_BASE}/indicators/graph?value=${encodeURIComponent(indicator)}`);
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message || 'Failed to fetch graph data');
+  }
+  return response.json();
+};
 
-export const getIndicatorGraph = (indicator) => 
-  fetchWrapper(`/indicators/graph?value=${encodeURIComponent(indicator)}`);
-
-export const getHiddenLinks = () => 
-  fetchWrapper('/campaigns/hidden-links');
+export const getHiddenLinks = async () => {
+  const response = await fetch(`${API_BASE}/campaigns/hidden-links`);
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message || 'Failed to fetch hidden links');
+  }
+  return response.json();
+};
