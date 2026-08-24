@@ -1,6 +1,6 @@
 // frontend/src/services/api.js
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://threat-trace-yaik.onrender.com';
 
 async function fetchWrapper(endpoint) {
   try {
