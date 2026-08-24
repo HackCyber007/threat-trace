@@ -2,8 +2,8 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const { getIndicatorSummary, getIndicatorGraph } = require('./controllers/indicatorController');
-const { getHiddenLinks } = require('./controllers/campaignController');
+const { getIndicatorSummary, getIndicatorGraph } = require('src/controllers/indicatorController');
+const { getHiddenLinks } = require('src/controllers/campaignController');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
