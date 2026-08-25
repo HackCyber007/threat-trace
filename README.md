@@ -1,3 +1,6 @@
+
+
+
 # Threat Trace: IOC Correlation Intelligence
 
 **Threat Trace** is a full-stack web application designed for cybersecurity analysts. It allows users to investigate suspicious indicators of compromise (IPs, domains, hashes) and discover multi-hop links to hidden campaigns, malware, and shared infrastructure that wouldn't be obvious from looking at any single record.
@@ -5,8 +8,11 @@
 ### Links & Deliverables
 *   **Live Demo:** https://threat-trace-eight.vercel.app/
 
-*   **Screen Recording:** 
-<video src="./front-end-demo.mp4" controls="controls" style="max-width: 100%;" >
+*   **Screen Recording:** (
+
+https://github.com/user-attachments/assets/42301b71-f456-42f3-ae13-a2b04f155b1e
+
+)
 
 *   **GitHub Repository:** https://github.com/HackCyber007/threat-trace
 
@@ -144,17 +150,17 @@ RETURN
 ### Simple View (Analyst Summary)
 
 
-![Simple view](image.png)
+![Simple view](frontend/image.png)
 
 ### Developer Canvas (Force-Directed Graph)
 
 
-![Developer Canvas](image-1.png)
+![Developer Canvas](frontend/image-1.png)
 
 ### Hidden Links Analysis
 
 
-![hidden Links](image-2.png)
+![hidden Links](frontend/image-2.png)
 
 
 
