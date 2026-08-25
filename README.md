@@ -5,8 +5,7 @@
 ### Links & Deliverables
 *   **Live Demo:** https://threat-trace-eight.vercel.app/
 
-*   **Screen Recording:** 
-<video src="./front-end-demo.mp4" controls="controls" style="max-width: 100%;" >
+*   **Screen Recording:**  (./front-end-demo.mp4)
 
 *   **GitHub Repository:** https://github.com/HackCyber007/threat-trace
 
