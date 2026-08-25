@@ -1,4 +1,3 @@
-// frontend/src/App.jsx
 import { useState } from 'react';
 import { getIndicatorSummary, getIndicatorGraph, getHiddenLinks } from './services/api';
 import SimpleView from './components/SimpleView';

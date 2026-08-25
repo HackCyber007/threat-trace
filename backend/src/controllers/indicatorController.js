@@ -1,4 +1,3 @@
-// backend/src/controllers/indicatorController.js
 const { executeQuery } = require('../services/db');
 
 // Multi-hop Cypher traversal (parameterized)

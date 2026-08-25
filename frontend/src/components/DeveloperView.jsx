@@ -1,4 +1,4 @@
-// frontend/src/components/DeveloperView.jsx
+
 import { useState, useRef, useEffect } from 'react';
 import CytoscapeComponent from 'react-cytoscapejs';
 import { Terminal, Info, Map, Layers } from 'lucide-react';

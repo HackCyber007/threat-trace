@@ -1,5 +1,3 @@
-// frontend/src/services/api.js
-
 const API_BASE = 'https://threat-trace-yaik.onrender.com/api';
 
 export const getIndicatorSummary = async (indicator) => {

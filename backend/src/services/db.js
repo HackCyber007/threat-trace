@@ -1,4 +1,3 @@
-// backend/src/services/db.js
 const neo4j = require('neo4j-driver');
 require('dotenv').config();
 

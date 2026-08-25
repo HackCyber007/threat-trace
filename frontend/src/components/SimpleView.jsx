@@ -1,4 +1,4 @@
-// frontend/src/components/SimpleView.jsx
+
 import { useState } from 'react';
 import { 
   ShieldAlert, 

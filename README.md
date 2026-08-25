@@ -3,9 +3,29 @@
 **Threat Trace** is a full-stack web application designed for cybersecurity analysts. It allows users to investigate suspicious indicators of compromise (IPs, domains, hashes) and discover multi-hop links to hidden campaigns, malware, and shared infrastructure that wouldn't be obvious from looking at any single record.
 
 ### Links & Deliverables
-*   **Live Demo:** [Insert Vercel/Netlify Link Here]
-*   **Screen Recording:** [Insert Loom/YouTube Link Here]
-*   **GitHub Repository:** [Insert Repo Link Here]
+*   **Live Demo:** https://threat-trace-eight.vercel.app/
+
+*   **Screen Recording:** 
+<video src="./front-end-demo.mp4" controls="controls" style="max-width: 100%;" >
+
+*   **GitHub Repository:** https://github.com/HackCyber007/threat-trace
+
+---
+##  Demo Dataset & Test Indicators
+
+To provide a deterministic and stable environment for evaluating the graph data model, this deployment runs on a pre-seeded threat intelligence graph stored in CognoDB rather than live external API feeds.
+
+Use the curated Indicators of Compromise (IoCs) below to test multi-hop traversals and cross-campaign correlations:
+
+| Type | Test Value |
+| :--- | :--- | :--- |
+| **IP Address** | `103.45.67.89` 
+| **IP Address** | `185.220.101.5` 
+| **Domain** | `update-service-sys.com`
+| **Domain** | `cdn-cloud-storage.net` 
+| **Malware Hash** | `e3b0c44298fc1c14`
+
+> **Note:** Entering values outside the seeded graph will return a clean "No Threat Indicators Found" state, demonstrating proper empty-state handling.
 
 ---
 
@@ -124,17 +144,21 @@ RETURN
 ### Simple View (Analyst Summary)
 
 
-![alt text](image.png)
+![Simple view](image.png)
 
 ### Developer Canvas (Force-Directed Graph)
 
 
-![alt text](image-1.png)
+![Developer Canvas](image-1.png)
 
 ### Hidden Links Analysis
 
 
-![alt text](image-2.png)
+![hidden Links](image-2.png)
+
+
+
+
 
 ```
 

@@ -1,4 +1,3 @@
-// backend/src/controllers/campaignController.js
 const { executeQuery } = require('../services/db');
 
 const HIDDEN_LINKS_CYPHER = `

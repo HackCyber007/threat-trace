@@ -1,4 +1,3 @@
-// backend/seed/seed.js
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '../.env') });
 const neo4j = require('neo4j-driver');
