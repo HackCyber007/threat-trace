@@ -23,12 +23,16 @@ To provide a deterministic and stable environment for evaluating the graph data 
 
 Use the curated Indicators of Compromise (IoCs) below to test multi-hop traversals and cross-campaign correlations:
 
-| Type | Test Value |
-| :--- | :--- | :--- |
+| Type | Test Value 
+
 | **IP Address** | `103.45.67.89` 
+
 | **IP Address** | `185.220.101.5` 
+
 | **Domain** | `update-service-sys.com`
+
 | **Domain** | `cdn-cloud-storage.net` 
+
 | **Malware Hash** | `e3b0c44298fc1c14`
 
 > **Note:** Entering values outside the seeded graph will return a clean "No Threat Indicators Found" state, demonstrating proper empty-state handling.
